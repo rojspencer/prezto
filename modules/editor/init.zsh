@@ -245,13 +245,15 @@ bindkey -M vicmd "v" edit-command-line
 bindkey -M vicmd "u" undo
 bindkey -M vicmd "$key_info[Control]R" redo
 
-if (( $+widgets[history-incremental-pattern-search-backward] )); then
-  bindkey -M vicmd "?" history-incremental-pattern-search-backward
-  bindkey -M vicmd "/" history-incremental-pattern-search-forward
-else
-  bindkey -M vicmd "?" history-incremental-search-backward
-  bindkey -M vicmd "/" history-incremental-search-forward
-fi
+# This totally breaks vimode history searching.
+# Whoever put this here didn't know what they were doing.
+# if (( $+widgets[history-incremental-pattern-search-backward] )); then
+#   bindkey -M vicmd "?" history-incremental-pattern-search-backward
+#   bindkey -M vicmd "/" history-incremental-pattern-search-forward
+# else
+#   bindkey -M vicmd "?" history-incremental-search-backward
+#   bindkey -M vicmd "/" history-incremental-search-forward
+# fi
 
 #
 # Emacs and Vi Key Bindings
