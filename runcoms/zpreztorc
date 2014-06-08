@@ -34,8 +34,7 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'tmux' \
   'git' \
-  'python' \
-  'prompt'
+  'python'
 
 # zstyle ':prezto:load' pmodule \
 #   'environment' \
