@@ -247,7 +247,15 @@ bindkey -M vicmd "v" edit-command-line
 bindkey -M vicmd "u" undo
 bindkey -M vicmd "$key_info[Control]R" redo
 
-# This totally breaks vimode history searching.
+# allow ctrl-p, ctrl-n for navigate history (standard behaviour)
+bindkey '^P' up-line-or-history
+bindkey '^N' down-line-or-history
+
+# allow ctrl-a and ctrl-e to move to beginning/end of line
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
+
+#  This totally breaks vimode history searching.
 # Whoever put this here didn't know what they were doing.
 # if (( $+widgets[history-incremental-pattern-search-backward] )); then
 #   bindkey -M vicmd "?" history-incremental-pattern-search-backward
